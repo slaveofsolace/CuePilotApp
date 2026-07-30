@@ -1,0 +1,205 @@
+name: CuePilot
+options:
+  bundleIdPrefix: com.slaveofsolace
+  deploymentTarget:
+    iOS: "18.0"
+    macOS: "15.0"
+  generateEmptyDirectories: true
+  groupSortPosition: top
+  xcodeVersion: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 0.1.0
+    ENABLE_USER_SCRIPT_SANDBOXING: true
+    CLANG_ENABLE_MODULES: true
+    SWIFT_STRICT_CONCURRENCY: complete
+packages:
+  CuePilotCore:
+    path: .
+targets:
+  CuePilot:
+    type: application
+    platform: iOS
+    sources:
+      - path: Apps/iOS/CuePilot
+      - path: Apps/iOS/Shared
+      - path: Resources/Assets.xcassets
+        buildPhase: resources
+    info:
+      path: Apps/iOS/CuePilot/Info.plist
+      properties:
+        CFBundleDisplayName: CuePilot
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - audio
+        NSPhotoLibraryUsageDescription: CuePilot can analyze a screenshot you choose. Images stay on this device.
+        NSSupportsLiveActivities: false
+    entitlements:
+      path: Apps/iOS/CuePilot/CuePilot.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.slaveofsolace.cuepilot
+    dependencies:
+      - target: CuePilotBroadcast
+        embed: true
+        codeSign: true
+      - target: CuePilotAppIntents
+      - package: CuePilotCore
+        product: CueGeometry
+      - package: CuePilotCore
+        product: CuePhysics
+      - package: CuePilotCore
+        product: CueStrategy
+      - package: CuePilotCore
+        product: CueCalibration
+      - package: CuePilotCore
+        product: CueSession
+      - package: CuePilotCore
+        product: CuePresentation
+      - package: CuePilotCore
+        product: CueDiagnostics
+      - package: CuePilotCore
+        product: CueVision
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+  CuePilotBroadcast:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Extensions/BroadcastUpload
+    info:
+      path: Extensions/BroadcastUpload/Info.plist
+      properties:
+        CFBundleDisplayName: CuePilot Broadcast
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionAttributes:
+            RPBroadcastProcessMode: RPBroadcastProcessModeSampleBuffer
+          NSExtensionPointIdentifier: com.apple.broadcast-services-upload
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).SampleHandler
+    entitlements:
+      path: Extensions/BroadcastUpload/CuePilotBroadcast.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.slaveofsolace.cuepilot
+    dependencies:
+      - package: CuePilotCore
+        product: CueGeometry
+      - package: CuePilotCore
+        product: CuePhysics
+      - package: CuePilotCore
+        product: CueStrategy
+      - package: CuePilotCore
+        product: CuePresentation
+      - package: CuePilotCore
+        product: CueDiagnostics
+      - package: CuePilotCore
+        product: CueVision
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot.broadcast
+        CODE_SIGN_STYLE: Automatic
+        MARKETING_VERSION: 0.1.0
+        SKIP_INSTALL: true
+        TARGETED_DEVICE_FAMILY: "1"
+  CuePilotAppIntents:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Apps/iOS/AppIntents
+    dependencies:
+      - package: CuePilotCore
+        product: CueSession
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot.intents
+        CODE_SIGN_STYLE: Automatic
+        MARKETING_VERSION: 0.1.0
+        SKIP_INSTALL: true
+        TARGETED_DEVICE_FAMILY: "1"
+  CuePilotUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Tests/CuePilotUITests
+    dependencies:
+      - target: CuePilot
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot.uitests
+        TEST_TARGET_NAME: CuePilot
+  CuePilotMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: Apps/macOS/CuePilotMac
+      - path: Resources/Assets.xcassets
+        buildPhase: resources
+    info:
+      path: Apps/macOS/CuePilotMac/Info.plist
+      properties:
+        CFBundleDisplayName: CuePilot
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSApplicationCategoryType: public.app-category.utilities
+        NSPrincipalClass: NSApplication
+        NSScreenCaptureUsageDescription: CuePilot captures and analyzes only the window you select after you choose Start Analysis. Frames stay on this Mac.
+    entitlements:
+      path: Apps/macOS/CuePilotMac/CuePilotMac.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.device.audio-output: true
+        com.apple.security.files.user-selected.read-only: true
+        com.apple.security.network.client: false
+    dependencies:
+      - package: CuePilotCore
+        product: CueGeometry
+      - package: CuePilotCore
+        product: CuePhysics
+      - package: CuePilotCore
+        product: CueStrategy
+      - package: CuePilotCore
+        product: CueCalibration
+      - package: CuePilotCore
+        product: CueSession
+      - package: CuePilotCore
+        product: CuePresentation
+      - package: CuePilotCore
+        product: CueDiagnostics
+      - package: CuePilotCore
+        product: CueVision
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot.mac
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: true
+schemes:
+  CuePilot:
+    build:
+      targets:
+        CuePilot: all
+        CuePilotBroadcast: all
+        CuePilotAppIntents: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - CuePilotUITests
+  CuePilotMac:
+    build:
+      targets:
+        CuePilotMac: all
+    run:
+      config: Debug
+    test:
+      config: Debug

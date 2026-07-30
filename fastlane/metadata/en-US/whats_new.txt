@@ -1,0 +1,3 @@
+Initial internal candidate with on-device screenshot analysis, manual table and
+ball correction, 8-ball rules, shot-path and power guidance, and explicit
+Live Assist setup.

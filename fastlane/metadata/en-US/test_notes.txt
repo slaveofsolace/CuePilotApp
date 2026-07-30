@@ -1,0 +1,5 @@
+Use synthetic or personally owned screenshots only. Verify table-corner,
+pocket, ball-position, and ball-classification correction; group and turn
+controls; called 8-ball pocket validation; and legal-shot presentation. Live
+broadcast and Picture in Picture require explicit system actions on a physical
+iPhone and are not qualified by simulator testing.

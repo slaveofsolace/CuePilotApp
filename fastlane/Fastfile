@@ -1,0 +1,73 @@
+default_platform(:ios)
+
+def connect_api_key
+  app_store_connect_api_key(
+    key_id: ENV.fetch("ASC_KEY_ID"),
+    issuer_id: ENV.fetch("ASC_ISSUER_ID"),
+    key_filepath: ENV.fetch("ASC_KEY_PATH"),
+    in_house: false
+  )
+end
+
+platform :ios do
+  desc "Run shared and iOS test suites"
+  lane :test do
+    sh("swift test")
+    run_tests(
+      workspace: "CuePilot.xcworkspace",
+      scheme: "CuePilot",
+      clean: true,
+      devices: ["iPhone 16 Pro"],
+      ensure_devices_found: true,
+      derived_data_path: "DerivedData/FastlaneTests"
+    )
+  end
+
+  desc "Build the iPhone application"
+  lane :build do
+    build_app(
+      workspace: "CuePilot.xcworkspace",
+      scheme: "CuePilot",
+      configuration: "Release",
+      clean: true,
+      skip_archive: true,
+      skip_codesigning: true
+    )
+  end
+
+  desc "Create a signed App Store Connect archive"
+  lane :archive do
+    build_app(
+      workspace: "CuePilot.xcworkspace",
+      scheme: "CuePilot",
+      configuration: "Release",
+      clean: true,
+      export_method: "app-store",
+      export_options: "fastlane/ExportOptions-AppStore.plist"
+    )
+  end
+
+  desc "Upload build 1 to the Personal internal TestFlight group"
+  lane :upload_testflight do
+    api_key = connect_api_key
+    archive
+    upload_to_testflight(
+      api_key: api_key,
+      app_identifier: "com.slaveofsolace.cuepilot",
+      distribute_external: false,
+      groups: ["Personal"],
+      changelog: File.read("fastlane/metadata/en-US/whats_new.txt"),
+      beta_app_description: File.read("fastlane/metadata/en-US/description.txt"),
+      beta_app_feedback_email: ENV["BETA_FEEDBACK_EMAIL"],
+      demo_account_required: false,
+      skip_waiting_for_build_processing: false
+    )
+  end
+end
+
+platform :mac do
+  desc "Build the macOS precision overlay"
+  lane :build do
+    sh("swift build --product CuePilotMac -c release")
+  end
+end

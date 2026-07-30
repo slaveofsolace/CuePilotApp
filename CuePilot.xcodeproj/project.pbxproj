@@ -1,0 +1,1241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08DDC4F62EAD207A1B96CF65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24092CE68E5CC5E86AA8C7E5 /* HomeView.swift */; };
+		0C44ADB46860ADAACEB32B47 /* OverlayPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8AD9D5026D32AF79CC59B3 /* OverlayPanelController.swift */; };
+		2499026557CE63626FAE237C /* CuePhysics in Frameworks */ = {isa = PBXBuildFile; productRef = 29DA034DB9C5E2BC81D78514 /* CuePhysics */; };
+		280197A7C36799E516BC083A /* CuePilotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06829447CB6F01958E04BECE /* CuePilotUITests.swift */; };
+		2F7C00D97A431B1BB5B79C0E /* CaptureModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4268F853832EC4728ECF9537 /* CaptureModels.swift */; };
+		36CD46EED59E2BF4010F155B /* ScreenshotImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3013311CE822BDB45778B7 /* ScreenshotImageConverter.swift */; };
+		3886C7B76AF87C6467A90A1C /* ShotResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D729439FD1039B28BB862 /* ShotResultView.swift */; };
+		3C954ACBF602892951F705F5 /* CueDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 325414EEF1F09ECDA52B41F7 /* CueDiagnostics */; };
+		3CAAA52BEC1A7EB36A648BC4 /* CuePilotAppIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3189C0C8BF9C152A4948FC2A /* CuePilotAppIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D48F2C712616FE231DFC210 /* CueStrategy in Frameworks */ = {isa = PBXBuildFile; productRef = 2BEAB9E46CDD49AA06BAEFF1 /* CueStrategy */; };
+		427CD128C09BBBC726832FA9 /* CueSession in Frameworks */ = {isa = PBXBuildFile; productRef = 96B433D1318C7EB81FFBA4A0 /* CueSession */; };
+		4A0F13AE606849C778C4B66A /* CuePilotMacModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAF533AF83742B04C7923CA /* CuePilotMacModel.swift */; };
+		537DAFBD06BB1C43D1F20E4D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 867C8A700074113A5C544A92 /* PrivacyInfo.xcprivacy */; };
+		55658AD1723DB48A8694FF75 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141FB5BB17D6DBCC9CD88461 /* AppRoute.swift */; };
+		5AE2F7D848C14DD5ED21B3E0 /* CuePilotMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A4F8E4079B1EEB89D8F14 /* CuePilotMacApp.swift */; };
+		5EDE92D0CA9915351C2403AE /* FrameAnalysisWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0FAD9FA6D592D2BD230BE /* FrameAnalysisWorker.swift */; };
+		60523A3C092CCD66414603F7 /* CuePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 8C8919661E5614E2D37C2CD8 /* CuePresentation */; };
+		61BB9F8F569874A6B3C74917 /* CuePilotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02B637A24BACCBFC185713 /* CuePilotApp.swift */; };
+		621E4471C59E2009D74FDDCE /* CueStrategy in Frameworks */ = {isa = PBXBuildFile; productRef = BB3078565C388DCA17E7035F /* CueStrategy */; };
+		63228D9D1CA1B7D1ED906A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA622377BC9FA6B74BC5794 /* Assets.xcassets */; };
+		6954EFF9E4EAA5A04392E8D9 /* WindowCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645507ED4D79863609B1A3AC /* WindowCaptureService.swift */; };
+		6D4DD07274647D732624549E /* CueVision in Frameworks */ = {isa = PBXBuildFile; productRef = 2900825B9DDFD906B76CBCCB /* CueVision */; };
+		72E4BB5DA28C4936FB3C470A /* CueVision in Frameworks */ = {isa = PBXBuildFile; productRef = E1F9B51F15402B80BFA8EA3B /* CueVision */; };
+		751F4D64D770D8893F617234 /* CalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFC5EFEED5240DAF0CA57B /* CalibrationView.swift */; };
+		7708F69E974312B4DC659086 /* CueSession in Frameworks */ = {isa = PBXBuildFile; productRef = 42FFA9A2856AFAD91443197F /* CueSession */; };
+		7A2794DCC9D69A15D8F25FE8 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B382530181510F935E62A /* SampleHandler.swift */; };
+		7B6989AF27B63A6AD867125E /* CuePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 5B824D91CC42B2963C4A5020 /* CuePresentation */; };
+		7E75C512C676675075844156 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 22EE57784D5062150DA79592 /* PrivacyInfo.xcprivacy */; };
+		7FA7D23E21980CCFF588BA54 /* CueStrategy in Frameworks */ = {isa = PBXBuildFile; productRef = C64164BD7F4637BC2400AFA9 /* CueStrategy */; };
+		802F90ED5F24EA32857F7F2D /* SecondaryToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B71053F6713A69C56155D4 /* SecondaryToolsView.swift */; };
+		80C10DABC4D5D4FBDC0C6AED /* CueGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = CDE5BB62A1CF696DC144C1CA /* CueGeometry */; };
+		817AF454859755A1D555143B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA622377BC9FA6B74BC5794 /* Assets.xcassets */; };
+		97E39AF7404C4E0BD253607B /* GlobalHotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71060C9EA76ECE2D9AC4102 /* GlobalHotKeyController.swift */; };
+		A1EF5219729B9550787765D2 /* CuePilotBroadcast.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CBBA3BE08265AEC2F0355BE7 /* CuePilotBroadcast.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD98D9ECDA045EDB93C1203F /* MatchSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE35004FD95C9C102F26CC6 /* MatchSessionView.swift */; };
+		B61946B9C2447A35021DD5EF /* ActionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EF9095C12877CBC571DF2D /* ActionRow.swift */; };
+		B807CC9E4E51B4DEF4ECE9B9 /* CueGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = BE98A9F9E7FB5D3A2B5AF000 /* CueGeometry */; };
+		B9494059B9516AD36AB14B48 /* LiveAssistSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6074E8086CFFEDAAB9CD4C /* LiveAssistSetupView.swift */; };
+		BF02A84365A12A4025A944B9 /* CueCalibration in Frameworks */ = {isa = PBXBuildFile; productRef = 03B9870EA67779B5B841F419 /* CueCalibration */; };
+		C5C396229C3FEA7A55CA181E /* CueSession in Frameworks */ = {isa = PBXBuildFile; productRef = E0AE760CEAB4F77404523AEA /* CueSession */; };
+		C5FE86B3B200EC1495C79273 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6DC32C6E0046BE2475A7FF /* SettingsView.swift */; };
+		C922E7D7B3080B777E16CA98 /* CuePilotState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E76C61092265CAD7741121 /* CuePilotState.swift */; };
+		C9BA607E59C63A698529E314 /* CuePilotAppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3189C0C8BF9C152A4948FC2A /* CuePilotAppIntents.framework */; };
+		CE562E57620F6407CF6B3455 /* BroadcastPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AACFB82C6EA35CB6608B89 /* BroadcastPickerButton.swift */; };
+		CF5217071A86DFB8D96FC6E7 /* CuePresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 80553D2A750792EEECACF496 /* CuePresentation */; };
+		CFEF00E0DA8C8B89749DD398 /* CuePilotMacViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E441BD2B5DF78E6B425CAB /* CuePilotMacViews.swift */; };
+		D4AF091F3639DBA7B3CB523D /* TableDiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D91DEF9051805BC95634 /* TableDiagramView.swift */; };
+		D8891C84D8E179077DF97B5C /* CuePhysics in Frameworks */ = {isa = PBXBuildFile; productRef = 959F6946B22B462E1C17E3D4 /* CuePhysics */; };
+		DA37D05D5F365809EC91960F /* CueCalibration in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB32AD338197A847BFEE767 /* CueCalibration */; };
+		DF4FD6787E3434E488F6B248 /* CuePhysics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1F6D238740AF2C9095B384 /* CuePhysics */; };
+		E14963783F5A0087F9E0B98E /* EditableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E34AA39510274141698387 /* EditableTableView.swift */; };
+		E3810ED0957351D35958F8BB /* CueVision in Frameworks */ = {isa = PBXBuildFile; productRef = 67BC84F7C2F390C8864798EB /* CueVision */; };
+		E3B2ADF54062B299C80BC416 /* DetectionReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC2D43DDC0699FF2E9B86F /* DetectionReviewView.swift */; };
+		E8EC3110704E45602DB4B62B /* CuePilotShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933FF25B0E4C186726A2F40 /* CuePilotShortcuts.swift */; };
+		E919E9F99002F38B3475F0E7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9DF6CE765EF3B7A6F693DF68 /* PrivacyInfo.xcprivacy */; };
+		EB0DB985DEEDFC1868586972 /* CueDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 88767C9673B64E1199A760B8 /* CueDiagnostics */; };
+		F9561EA4FC3F4BF330104696 /* PictureInPictureGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE73ECA71414BB6F8DCE51 /* PictureInPictureGuide.swift */; };
+		FB1D742B4D8FC3BAEC648A1D /* CueDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = D31D7542A186AAB3F978E805 /* CueDiagnostics */; };
+		FF542629DEDADD91E1F139BE /* CuePilotTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF123FCEA2C31D4337D227A /* CuePilotTheme.swift */; };
+		FF5EF83BBCB5C0419DB33108 /* CueGeometry in Frameworks */ = {isa = PBXBuildFile; productRef = 0E11C5501AD45C48093290F2 /* CueGeometry */; };
+		FFF21A2018971555B0703049 /* CuePilotMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308616A45290817458821ED1 /* CuePilotMark.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E0E8DF463A63FBD157B9966 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F951346FA4ED04054FBDFD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A844F5AE9646CC4838CE189;
+			remoteInfo = CuePilotBroadcast;
+		};
+		958975B1494FA38B6B5D3CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F951346FA4ED04054FBDFD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E24826D6D4E43898EE141B8;
+			remoteInfo = CuePilot;
+		};
+		ED6E362AC668E65676C463A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F951346FA4ED04054FBDFD42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 944FE9577DA7FE7DDDDB9A00;
+			remoteInfo = CuePilotAppIntents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E75F6579F515E027FA21925 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CAAA52BEC1A7EB36A648BC4 /* CuePilotAppIntents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A149E895334EE32FE4C560 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1EF5219729B9550787765D2 /* CuePilotBroadcast.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06829447CB6F01958E04BECE /* CuePilotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotUITests.swift; sourceTree = "<group>"; };
+		097C95673F09FC35C1B7ED1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0DE35004FD95C9C102F26CC6 /* MatchSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSessionView.swift; sourceTree = "<group>"; };
+		141FB5BB17D6DBCC9CD88461 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		191B382530181510F935E62A /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		1DC544F31FD06D99BA7D1856 /* CuePilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuePilot.entitlements; sourceTree = "<group>"; };
+		20E34AA39510274141698387 /* EditableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableView.swift; sourceTree = "<group>"; };
+		22EE57784D5062150DA79592 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		24092CE68E5CC5E86AA8C7E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		27D7D91DEF9051805BC95634 /* TableDiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDiagramView.swift; sourceTree = "<group>"; };
+		2EAAA241C6759D800FA1E999 /* CuePilotBroadcast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuePilotBroadcast.entitlements; sourceTree = "<group>"; };
+		308616A45290817458821ED1 /* CuePilotMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotMark.swift; sourceTree = "<group>"; };
+		3189C0C8BF9C152A4948FC2A /* CuePilotAppIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CuePilotAppIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36EF9095C12877CBC571DF2D /* ActionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRow.swift; sourceTree = "<group>"; };
+		3D6074E8086CFFEDAAB9CD4C /* LiveAssistSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAssistSetupView.swift; sourceTree = "<group>"; };
+		3F51E2A4E250F783BA342420 /* CuePilotUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CuePilotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4268F853832EC4728ECF9537 /* CaptureModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureModels.swift; sourceTree = "<group>"; };
+		48C0FAD9FA6D592D2BD230BE /* FrameAnalysisWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameAnalysisWorker.swift; sourceTree = "<group>"; };
+		4933FF25B0E4C186726A2F40 /* CuePilotShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotShortcuts.swift; sourceTree = "<group>"; };
+		4ECC2D43DDC0699FF2E9B86F /* DetectionReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionReviewView.swift; sourceTree = "<group>"; };
+		645507ED4D79863609B1A3AC /* WindowCaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCaptureService.swift; sourceTree = "<group>"; };
+		6A8AD9D5026D32AF79CC59B3 /* OverlayPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPanelController.swift; sourceTree = "<group>"; };
+		6B8D729439FD1039B28BB862 /* ShotResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotResultView.swift; sourceTree = "<group>"; };
+		6F721E1954547E8D3F393BEF /* CuePilotMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuePilotMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FF123FCEA2C31D4337D227A /* CuePilotTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotTheme.swift; sourceTree = "<group>"; };
+		79AACFB82C6EA35CB6608B89 /* BroadcastPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastPickerButton.swift; sourceTree = "<group>"; };
+		834570D7F938575712730F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		867C8A700074113A5C544A92 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8C3013311CE822BDB45778B7 /* ScreenshotImageConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotImageConverter.swift; sourceTree = "<group>"; };
+		9C6DC32C6E0046BE2475A7FF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9DAF533AF83742B04C7923CA /* CuePilotMacModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotMacModel.swift; sourceTree = "<group>"; };
+		9DF6CE765EF3B7A6F693DF68 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9FBE73ECA71414BB6F8DCE51 /* PictureInPictureGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInPictureGuide.swift; sourceTree = "<group>"; };
+		A2DFC5EFEED5240DAF0CA57B /* CalibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationView.swift; sourceTree = "<group>"; };
+		B4B71053F6713A69C56155D4 /* SecondaryToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryToolsView.swift; sourceTree = "<group>"; };
+		B6685367F17EA5EEBE4E87A6 /* CuePilotMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CuePilotMac.entitlements; sourceTree = "<group>"; };
+		B6E441BD2B5DF78E6B425CAB /* CuePilotMacViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotMacViews.swift; sourceTree = "<group>"; };
+		B71060C9EA76ECE2D9AC4102 /* GlobalHotKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKeyController.swift; sourceTree = "<group>"; };
+		BC499B1A2995A2FE575EF1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CBBA3BE08265AEC2F0355BE7 /* CuePilotBroadcast.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CuePilotBroadcast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC02B637A24BACCBFC185713 /* CuePilotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotApp.swift; sourceTree = "<group>"; };
+		CC775DD5B9AF96DE764F99D2 /* CuePilotApp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CuePilotApp; path = .; sourceTree = SOURCE_ROOT; };
+		D08A4F8E4079B1EEB89D8F14 /* CuePilotMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotMacApp.swift; sourceTree = "<group>"; };
+		E1E76C61092265CAD7741121 /* CuePilotState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePilotState.swift; sourceTree = "<group>"; };
+		EAA622377BC9FA6B74BC5794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4E6C4D6C5DC7C5A7E448371 /* CuePilot.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CuePilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28F0224072FF23478465AA30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7708F69E974312B4DC659086 /* CueSession in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66A16F9D6FA303C6225858B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BA607E59C63A698529E314 /* CuePilotAppIntents.framework in Frameworks */,
+				FF5EF83BBCB5C0419DB33108 /* CueGeometry in Frameworks */,
+				D8891C84D8E179077DF97B5C /* CuePhysics in Frameworks */,
+				3D48F2C712616FE231DFC210 /* CueStrategy in Frameworks */,
+				DA37D05D5F365809EC91960F /* CueCalibration in Frameworks */,
+				C5C396229C3FEA7A55CA181E /* CueSession in Frameworks */,
+				CF5217071A86DFB8D96FC6E7 /* CuePresentation in Frameworks */,
+				FB1D742B4D8FC3BAEC648A1D /* CueDiagnostics in Frameworks */,
+				E3810ED0957351D35958F8BB /* CueVision in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		780EAE80B348FD5E8453CC06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B807CC9E4E51B4DEF4ECE9B9 /* CueGeometry in Frameworks */,
+				2499026557CE63626FAE237C /* CuePhysics in Frameworks */,
+				621E4471C59E2009D74FDDCE /* CueStrategy in Frameworks */,
+				60523A3C092CCD66414603F7 /* CuePresentation in Frameworks */,
+				EB0DB985DEEDFC1868586972 /* CueDiagnostics in Frameworks */,
+				6D4DD07274647D732624549E /* CueVision in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1F572AC4C43AF4A8C343186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C10DABC4D5D4FBDC0C6AED /* CueGeometry in Frameworks */,
+				DF4FD6787E3434E488F6B248 /* CuePhysics in Frameworks */,
+				7FA7D23E21980CCFF588BA54 /* CueStrategy in Frameworks */,
+				BF02A84365A12A4025A944B9 /* CueCalibration in Frameworks */,
+				427CD128C09BBBC726832FA9 /* CueSession in Frameworks */,
+				7B6989AF27B63A6AD867125E /* CuePresentation in Frameworks */,
+				3C954ACBF602892951F705F5 /* CueDiagnostics in Frameworks */,
+				72E4BB5DA28C4936FB3C470A /* CueVision in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0844EBDC1BFD6B3E279A1EEA /* CuePilotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06829447CB6F01958E04BECE /* CuePilotUITests.swift */,
+			);
+			path = CuePilotUITests;
+			sourceTree = "<group>";
+		};
+		0A08BD36CC1273C48858394C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B3F630D5D05626D0F905CDDB /* AppIntents */,
+				42CA2DE24FD227E0CD4B69D0 /* CuePilot */,
+				ADDE6C9251F37A42478B2518 /* Shared */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		0BDFDDE8D89FFA7588ABB249 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4474B48B002550766BCC37F8 /* CuePilotMac */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		0E4EF63D0E99D9EFC3012BAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		157E7E85052C664BF0E2780F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69F704004D4B69409292F26F /* BroadcastUpload */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		172E1A9E726BC0D18EE72F32 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CC775DD5B9AF96DE764F99D2 /* CuePilotApp */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		2654F6B2FCF4F550F16CAF42 = {
+			isa = PBXGroup;
+			children = (
+				537FDA2DE828789693190EF3 /* Apps */,
+				157E7E85052C664BF0E2780F /* Extensions */,
+				172E1A9E726BC0D18EE72F32 /* Packages */,
+				ABEA7EEF4920B5499AE35D16 /* Resources */,
+				CBE18FCBB6D8597C91BE2556 /* Tests */,
+				FF9636E6CF4CEB65E92E8272 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B11AA15B580D7566F6A05EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A3748D2C0468C16A7F683D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4204B31E7E199EDE6A64A2EE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				36EF9095C12877CBC571DF2D /* ActionRow.swift */,
+				308616A45290817458821ED1 /* CuePilotMark.swift */,
+				20E34AA39510274141698387 /* EditableTableView.swift */,
+				27D7D91DEF9051805BC95634 /* TableDiagramView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		42CA2DE24FD227E0CD4B69D0 /* CuePilot */ = {
+			isa = PBXGroup;
+			children = (
+				F9012E121AB85ABDB0E55F30 /* App */,
+				4204B31E7E199EDE6A64A2EE /* Components */,
+				FB5879E1CA65B324AFD785A5 /* Models */,
+				481A56D376ED2557B8160893 /* Services */,
+				CCD979BFF5DFD6C54E87C181 /* Views */,
+				1DC544F31FD06D99BA7D1856 /* CuePilot.entitlements */,
+				834570D7F938575712730F1E /* Info.plist */,
+				867C8A700074113A5C544A92 /* PrivacyInfo.xcprivacy */,
+			);
+			path = CuePilot;
+			sourceTree = "<group>";
+		};
+		4474B48B002550766BCC37F8 /* CuePilotMac */ = {
+			isa = PBXGroup;
+			children = (
+				3A3748D2C0468C16A7F683D5 /* App */,
+				2B11AA15B580D7566F6A05EA /* Models */,
+				7D716D445B8F718E897648A9 /* Services */,
+				791B1FD85706A986965D93DF /* Support */,
+				0E4EF63D0E99D9EFC3012BAC /* Views */,
+				4268F853832EC4728ECF9537 /* CaptureModels.swift */,
+				B6685367F17EA5EEBE4E87A6 /* CuePilotMac.entitlements */,
+				D08A4F8E4079B1EEB89D8F14 /* CuePilotMacApp.swift */,
+				9DAF533AF83742B04C7923CA /* CuePilotMacModel.swift */,
+				B6E441BD2B5DF78E6B425CAB /* CuePilotMacViews.swift */,
+				48C0FAD9FA6D592D2BD230BE /* FrameAnalysisWorker.swift */,
+				B71060C9EA76ECE2D9AC4102 /* GlobalHotKeyController.swift */,
+				097C95673F09FC35C1B7ED1F /* Info.plist */,
+				6A8AD9D5026D32AF79CC59B3 /* OverlayPanelController.swift */,
+				22EE57784D5062150DA79592 /* PrivacyInfo.xcprivacy */,
+				645507ED4D79863609B1A3AC /* WindowCaptureService.swift */,
+			);
+			path = CuePilotMac;
+			sourceTree = "<group>";
+		};
+		481A56D376ED2557B8160893 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				79AACFB82C6EA35CB6608B89 /* BroadcastPickerButton.swift */,
+				9FBE73ECA71414BB6F8DCE51 /* PictureInPictureGuide.swift */,
+				8C3013311CE822BDB45778B7 /* ScreenshotImageConverter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		537FDA2DE828789693190EF3 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				0A08BD36CC1273C48858394C /* iOS */,
+				0BDFDDE8D89FFA7588ABB249 /* macOS */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		69F704004D4B69409292F26F /* BroadcastUpload */ = {
+			isa = PBXGroup;
+			children = (
+				2EAAA241C6759D800FA1E999 /* CuePilotBroadcast.entitlements */,
+				BC499B1A2995A2FE575EF1F2 /* Info.plist */,
+				9DF6CE765EF3B7A6F693DF68 /* PrivacyInfo.xcprivacy */,
+				191B382530181510F935E62A /* SampleHandler.swift */,
+			);
+			path = BroadcastUpload;
+			sourceTree = "<group>";
+		};
+		791B1FD85706A986965D93DF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		7D716D445B8F718E897648A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ABEA7EEF4920B5499AE35D16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAA622377BC9FA6B74BC5794 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADDE6C9251F37A42478B2518 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6FF123FCEA2C31D4337D227A /* CuePilotTheme.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B3F630D5D05626D0F905CDDB /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				4933FF25B0E4C186726A2F40 /* CuePilotShortcuts.swift */,
+			);
+			path = AppIntents;
+			sourceTree = "<group>";
+		};
+		CBE18FCBB6D8597C91BE2556 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0844EBDC1BFD6B3E279A1EEA /* CuePilotUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CCD979BFF5DFD6C54E87C181 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2DFC5EFEED5240DAF0CA57B /* CalibrationView.swift */,
+				4ECC2D43DDC0699FF2E9B86F /* DetectionReviewView.swift */,
+				24092CE68E5CC5E86AA8C7E5 /* HomeView.swift */,
+				3D6074E8086CFFEDAAB9CD4C /* LiveAssistSetupView.swift */,
+				0DE35004FD95C9C102F26CC6 /* MatchSessionView.swift */,
+				B4B71053F6713A69C56155D4 /* SecondaryToolsView.swift */,
+				9C6DC32C6E0046BE2475A7FF /* SettingsView.swift */,
+				6B8D729439FD1039B28BB862 /* ShotResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9012E121AB85ABDB0E55F30 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC02B637A24BACCBFC185713 /* CuePilotApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB5879E1CA65B324AFD785A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				141FB5BB17D6DBCC9CD88461 /* AppRoute.swift */,
+				E1E76C61092265CAD7741121 /* CuePilotState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF9636E6CF4CEB65E92E8272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4E6C4D6C5DC7C5A7E448371 /* CuePilot.app */,
+				3189C0C8BF9C152A4948FC2A /* CuePilotAppIntents.framework */,
+				CBBA3BE08265AEC2F0355BE7 /* CuePilotBroadcast.appex */,
+				6F721E1954547E8D3F393BEF /* CuePilotMac.app */,
+				3F51E2A4E250F783BA342420 /* CuePilotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C098D3D83492308CB139235 /* CuePilotMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A20AAC5F2B90CD3AB8DF9A8D /* Build configuration list for PBXNativeTarget "CuePilotMac" */;
+			buildPhases = (
+				22E14FBDC6489769D44B095C /* Sources */,
+				C1226516158D6351B207CE71 /* Resources */,
+				C1F572AC4C43AF4A8C343186 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuePilotMac;
+			packageProductDependencies = (
+				CDE5BB62A1CF696DC144C1CA /* CueGeometry */,
+				3B1F6D238740AF2C9095B384 /* CuePhysics */,
+				C64164BD7F4637BC2400AFA9 /* CueStrategy */,
+				03B9870EA67779B5B841F419 /* CueCalibration */,
+				96B433D1318C7EB81FFBA4A0 /* CueSession */,
+				5B824D91CC42B2963C4A5020 /* CuePresentation */,
+				325414EEF1F09ECDA52B41F7 /* CueDiagnostics */,
+				E1F9B51F15402B80BFA8EA3B /* CueVision */,
+			);
+			productName = CuePilotMac;
+			productReference = 6F721E1954547E8D3F393BEF /* CuePilotMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E24826D6D4E43898EE141B8 /* CuePilot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6739803C799C0E698CDCED4E /* Build configuration list for PBXNativeTarget "CuePilot" */;
+			buildPhases = (
+				056211A2AD1496F33AB753B0 /* Sources */,
+				C69012A5A585A9F64EEA2309 /* Resources */,
+				66A16F9D6FA303C6225858B4 /* Frameworks */,
+				69A149E895334EE32FE4C560 /* Embed Foundation Extensions */,
+				4E75F6579F515E027FA21925 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A53031C0BCE538876DBF919D /* PBXTargetDependency */,
+				4FDA2E4DE6D3D4A56D73C1A8 /* PBXTargetDependency */,
+			);
+			name = CuePilot;
+			packageProductDependencies = (
+				0E11C5501AD45C48093290F2 /* CueGeometry */,
+				959F6946B22B462E1C17E3D4 /* CuePhysics */,
+				2BEAB9E46CDD49AA06BAEFF1 /* CueStrategy */,
+				8EB32AD338197A847BFEE767 /* CueCalibration */,
+				E0AE760CEAB4F77404523AEA /* CueSession */,
+				80553D2A750792EEECACF496 /* CuePresentation */,
+				D31D7542A186AAB3F978E805 /* CueDiagnostics */,
+				67BC84F7C2F390C8864798EB /* CueVision */,
+			);
+			productName = CuePilot;
+			productReference = F4E6C4D6C5DC7C5A7E448371 /* CuePilot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7A844F5AE9646CC4838CE189 /* CuePilotBroadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDE6BDF78497C379FA22FFA /* Build configuration list for PBXNativeTarget "CuePilotBroadcast" */;
+			buildPhases = (
+				DF81C5536CFA4146BB926520 /* Sources */,
+				F8E7EB5D196DE30441065192 /* Resources */,
+				780EAE80B348FD5E8453CC06 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuePilotBroadcast;
+			packageProductDependencies = (
+				BE98A9F9E7FB5D3A2B5AF000 /* CueGeometry */,
+				29DA034DB9C5E2BC81D78514 /* CuePhysics */,
+				BB3078565C388DCA17E7035F /* CueStrategy */,
+				8C8919661E5614E2D37C2CD8 /* CuePresentation */,
+				88767C9673B64E1199A760B8 /* CueDiagnostics */,
+				2900825B9DDFD906B76CBCCB /* CueVision */,
+			);
+			productName = CuePilotBroadcast;
+			productReference = CBBA3BE08265AEC2F0355BE7 /* CuePilotBroadcast.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		944FE9577DA7FE7DDDDB9A00 /* CuePilotAppIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338C3AC3C52A8FAA72B7CD1D /* Build configuration list for PBXNativeTarget "CuePilotAppIntents" */;
+			buildPhases = (
+				EFB0B3CCAC8AFCBA74D853F8 /* Sources */,
+				28F0224072FF23478465AA30 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuePilotAppIntents;
+			packageProductDependencies = (
+				42FFA9A2856AFAD91443197F /* CueSession */,
+			);
+			productName = CuePilotAppIntents;
+			productReference = 3189C0C8BF9C152A4948FC2A /* CuePilotAppIntents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CE2B7C4CFEFD3549DDADA6B3 /* CuePilotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ABB461E631B7719DBDCEAD8 /* Build configuration list for PBXNativeTarget "CuePilotUITests" */;
+			buildPhases = (
+				28F39D615B97BB935F353BC8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA660C59800ACF88955DBFC0 /* PBXTargetDependency */,
+			);
+			name = CuePilotUITests;
+			packageProductDependencies = (
+			);
+			productName = CuePilotUITests;
+			productReference = 3F51E2A4E250F783BA342420 /* CuePilotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F951346FA4ED04054FBDFD42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					0C098D3D83492308CB139235 = {
+						ProvisioningStyle = Automatic;
+					};
+					0E24826D6D4E43898EE141B8 = {
+						ProvisioningStyle = Automatic;
+					};
+					7A844F5AE9646CC4838CE189 = {
+						ProvisioningStyle = Automatic;
+					};
+					944FE9577DA7FE7DDDDB9A00 = {
+						ProvisioningStyle = Automatic;
+					};
+					CE2B7C4CFEFD3549DDADA6B3 = {
+						TestTargetID = 0E24826D6D4E43898EE141B8;
+					};
+				};
+			};
+			buildConfigurationList = 9840EC91CE15F92547D36C39 /* Build configuration list for PBXProject "CuePilot" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2654F6B2FCF4F550F16CAF42;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				91088105FBD93089BE39766B /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FF9636E6CF4CEB65E92E8272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E24826D6D4E43898EE141B8 /* CuePilot */,
+				7A844F5AE9646CC4838CE189 /* CuePilotBroadcast */,
+				944FE9577DA7FE7DDDDB9A00 /* CuePilotAppIntents */,
+				CE2B7C4CFEFD3549DDADA6B3 /* CuePilotUITests */,
+				0C098D3D83492308CB139235 /* CuePilotMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1226516158D6351B207CE71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				817AF454859755A1D555143B /* Assets.xcassets in Resources */,
+				7E75C512C676675075844156 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C69012A5A585A9F64EEA2309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63228D9D1CA1B7D1ED906A72 /* Assets.xcassets in Resources */,
+				537DAFBD06BB1C43D1F20E4D /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8E7EB5D196DE30441065192 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E919E9F99002F38B3475F0E7 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		056211A2AD1496F33AB753B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B61946B9C2447A35021DD5EF /* ActionRow.swift in Sources */,
+				55658AD1723DB48A8694FF75 /* AppRoute.swift in Sources */,
+				CE562E57620F6407CF6B3455 /* BroadcastPickerButton.swift in Sources */,
+				751F4D64D770D8893F617234 /* CalibrationView.swift in Sources */,
+				61BB9F8F569874A6B3C74917 /* CuePilotApp.swift in Sources */,
+				FFF21A2018971555B0703049 /* CuePilotMark.swift in Sources */,
+				C922E7D7B3080B777E16CA98 /* CuePilotState.swift in Sources */,
+				FF542629DEDADD91E1F139BE /* CuePilotTheme.swift in Sources */,
+				E3B2ADF54062B299C80BC416 /* DetectionReviewView.swift in Sources */,
+				E14963783F5A0087F9E0B98E /* EditableTableView.swift in Sources */,
+				08DDC4F62EAD207A1B96CF65 /* HomeView.swift in Sources */,
+				B9494059B9516AD36AB14B48 /* LiveAssistSetupView.swift in Sources */,
+				AD98D9ECDA045EDB93C1203F /* MatchSessionView.swift in Sources */,
+				F9561EA4FC3F4BF330104696 /* PictureInPictureGuide.swift in Sources */,
+				36CD46EED59E2BF4010F155B /* ScreenshotImageConverter.swift in Sources */,
+				802F90ED5F24EA32857F7F2D /* SecondaryToolsView.swift in Sources */,
+				C5FE86B3B200EC1495C79273 /* SettingsView.swift in Sources */,
+				3886C7B76AF87C6467A90A1C /* ShotResultView.swift in Sources */,
+				D4AF091F3639DBA7B3CB523D /* TableDiagramView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E14FBDC6489769D44B095C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F7C00D97A431B1BB5B79C0E /* CaptureModels.swift in Sources */,
+				5AE2F7D848C14DD5ED21B3E0 /* CuePilotMacApp.swift in Sources */,
+				4A0F13AE606849C778C4B66A /* CuePilotMacModel.swift in Sources */,
+				CFEF00E0DA8C8B89749DD398 /* CuePilotMacViews.swift in Sources */,
+				5EDE92D0CA9915351C2403AE /* FrameAnalysisWorker.swift in Sources */,
+				97E39AF7404C4E0BD253607B /* GlobalHotKeyController.swift in Sources */,
+				0C44ADB46860ADAACEB32B47 /* OverlayPanelController.swift in Sources */,
+				6954EFF9E4EAA5A04392E8D9 /* WindowCaptureService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F39D615B97BB935F353BC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280197A7C36799E516BC083A /* CuePilotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF81C5536CFA4146BB926520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2794DCC9D69A15D8F25FE8 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFB0B3CCAC8AFCBA74D853F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EC3110704E45602DB4B62B /* CuePilotShortcuts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FDA2E4DE6D3D4A56D73C1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 944FE9577DA7FE7DDDDB9A00 /* CuePilotAppIntents */;
+			targetProxy = ED6E362AC668E65676C463A8 /* PBXContainerItemProxy */;
+		};
+		A53031C0BCE538876DBF919D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A844F5AE9646CC4838CE189 /* CuePilotBroadcast */;
+			targetProxy = 5E0E8DF463A63FBD157B9966 /* PBXContainerItemProxy */;
+		};
+		AA660C59800ACF88955DBFC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E24826D6D4E43898EE141B8 /* CuePilot */;
+			targetProxy = 958975B1494FA38B6B5D3CD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11F9BC8CEABD4C43E6D38B2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/iOS/CuePilot/CuePilot.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Apps/iOS/CuePilot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1DD5A8C4722153872187D801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/macOS/CuePilotMac/CuePilotMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Apps/macOS/CuePilotMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.mac;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		26694C407D9A4AC50C6DF47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.intents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		377281C49FDCAA24D5475CE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/iOS/CuePilot/CuePilot.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Apps/iOS/CuePilot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4184AB38798A95B1B4E1C415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Apps/macOS/CuePilotMac/CuePilotMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Apps/macOS/CuePilotMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.mac;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4C0506BDDC48771E932A329E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extensions/BroadcastUpload/CuePilotBroadcast.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Extensions/BroadcastUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.broadcast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		63B9249B808A10BB22B6250D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		71A849E209C5A48B2C46E5EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extensions/BroadcastUpload/CuePilotBroadcast.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Extensions/BroadcastUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.broadcast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8D404B4209FB7D6DA5E8322C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.intents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		9628DA36C464B5B4F66A8F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CuePilot;
+			};
+			name = Debug;
+		};
+		D886E46280774F5A1D11F591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaveofsolace.cuepilot.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CuePilot;
+			};
+			name = Release;
+		};
+		F340F792981406A1E0362C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338C3AC3C52A8FAA72B7CD1D /* Build configuration list for PBXNativeTarget "CuePilotAppIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D404B4209FB7D6DA5E8322C /* Debug */,
+				26694C407D9A4AC50C6DF47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6739803C799C0E698CDCED4E /* Build configuration list for PBXNativeTarget "CuePilot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377281C49FDCAA24D5475CE2 /* Debug */,
+				11F9BC8CEABD4C43E6D38B2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7ABB461E631B7719DBDCEAD8 /* Build configuration list for PBXNativeTarget "CuePilotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9628DA36C464B5B4F66A8F10 /* Debug */,
+				D886E46280774F5A1D11F591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9840EC91CE15F92547D36C39 /* Build configuration list for PBXProject "CuePilot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F340F792981406A1E0362C84 /* Debug */,
+				63B9249B808A10BB22B6250D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A20AAC5F2B90CD3AB8DF9A8D /* Build configuration list for PBXNativeTarget "CuePilotMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD5A8C4722153872187D801 /* Debug */,
+				4184AB38798A95B1B4E1C415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEDE6BDF78497C379FA22FFA /* Build configuration list for PBXNativeTarget "CuePilotBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0506BDDC48771E932A329E /* Debug */,
+				71A849E209C5A48B2C46E5EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		91088105FBD93089BE39766B /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03B9870EA67779B5B841F419 /* CueCalibration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueCalibration;
+		};
+		0E11C5501AD45C48093290F2 /* CueGeometry */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueGeometry;
+		};
+		2900825B9DDFD906B76CBCCB /* CueVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueVision;
+		};
+		29DA034DB9C5E2BC81D78514 /* CuePhysics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePhysics;
+		};
+		2BEAB9E46CDD49AA06BAEFF1 /* CueStrategy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueStrategy;
+		};
+		325414EEF1F09ECDA52B41F7 /* CueDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueDiagnostics;
+		};
+		3B1F6D238740AF2C9095B384 /* CuePhysics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePhysics;
+		};
+		42FFA9A2856AFAD91443197F /* CueSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueSession;
+		};
+		5B824D91CC42B2963C4A5020 /* CuePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePresentation;
+		};
+		67BC84F7C2F390C8864798EB /* CueVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueVision;
+		};
+		80553D2A750792EEECACF496 /* CuePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePresentation;
+		};
+		88767C9673B64E1199A760B8 /* CueDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueDiagnostics;
+		};
+		8C8919661E5614E2D37C2CD8 /* CuePresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePresentation;
+		};
+		8EB32AD338197A847BFEE767 /* CueCalibration */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueCalibration;
+		};
+		959F6946B22B462E1C17E3D4 /* CuePhysics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CuePhysics;
+		};
+		96B433D1318C7EB81FFBA4A0 /* CueSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueSession;
+		};
+		BB3078565C388DCA17E7035F /* CueStrategy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueStrategy;
+		};
+		BE98A9F9E7FB5D3A2B5AF000 /* CueGeometry */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueGeometry;
+		};
+		C64164BD7F4637BC2400AFA9 /* CueStrategy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueStrategy;
+		};
+		CDE5BB62A1CF696DC144C1CA /* CueGeometry */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueGeometry;
+		};
+		D31D7542A186AAB3F978E805 /* CueDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueDiagnostics;
+		};
+		E0AE760CEAB4F77404523AEA /* CueSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueSession;
+		};
+		E1F9B51F15402B80BFA8EA3B /* CueVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CueVision;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F951346FA4ED04054FBDFD42 /* Project object */;
+}

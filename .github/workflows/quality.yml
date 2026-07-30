@@ -1,0 +1,76 @@
+name: Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  shared:
+    name: Shared engine
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Swift version
+        run: swift --version
+      - name: Test
+        run: swift test
+      - name: Release build
+        run: swift build -c release
+
+  apple-targets:
+    name: Apple targets and repository checks
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Install XcodeGen 2.46.0
+        env:
+          XCODEGEN_SHA256: 4d9e34b62172d645eed6457cac13fc222569974098ef4ee9c3368bedf0196806
+        run: |
+          curl --fail --location --silent --show-error \
+            --output "$RUNNER_TEMP/xcodegen.zip" \
+            https://github.com/yonaskolb/XcodeGen/releases/download/2.46.0/xcodegen.zip
+          echo "$XCODEGEN_SHA256  $RUNNER_TEMP/xcodegen.zip" | shasum -a 256 --check
+          unzip -q "$RUNNER_TEMP/xcodegen.zip" -d "$RUNNER_TEMP/xcodegen-tool"
+          echo "$RUNNER_TEMP/xcodegen-tool/xcodegen/bin" >> "$GITHUB_PATH"
+      - name: Generate project
+        run: ./script/generate_project.sh
+      - name: Check generated project
+        run: git diff --exit-code -- CuePilot.xcodeproj
+      - name: Build iPhone targets
+        run: |
+          xcodebuild \
+            -workspace CuePilot.xcworkspace \
+            -scheme CuePilot \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath DerivedData/CI-iOS \
+            CODE_SIGNING_ALLOWED=NO \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            build
+      - name: Build Mac target
+        run: |
+          xcodebuild \
+            -workspace CuePilot.xcworkspace \
+            -scheme CuePilotMac \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            -derivedDataPath DerivedData/CI-macOS \
+            CODE_SIGNING_ALLOWED=NO \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            build
+      - name: Private API scan
+        run: ./script/private_api_scan.sh
+      - name: Secret scan
+        run: ./script/secret_scan.sh
+      - name: Privacy scan
+        run: ./script/privacy_scan.sh
+      - name: Dependency audit
+        run: ./script/dependency_audit.sh

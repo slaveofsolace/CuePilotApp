@@ -1,0 +1,19 @@
+excluded:
+  - .build
+  - DerivedData
+  - CuePilot.xcodeproj
+
+disabled_rules:
+  - cyclomatic_complexity
+  - file_length
+  - for_where
+  - function_body_length
+  - function_parameter_count
+  - identifier_name
+  - large_tuple
+  - trailing_comma
+  - type_body_length
+
+line_length:
+  warning: 220
+  error: 260

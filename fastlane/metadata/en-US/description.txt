@@ -1,0 +1,4 @@
+CuePilot analyzes a visible billiards table on the device and presents
+legal-shot, alignment, and power guidance. The player performs every aim and
+shot. CuePilot does not control another application, upload captured frames,
+or retain a screen recording.
