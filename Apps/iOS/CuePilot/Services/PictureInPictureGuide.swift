@@ -296,8 +296,8 @@ final class PictureInPictureGuide: NSObject {
 }
 
 extension PictureInPictureGuide:
-    @MainActor AVPictureInPictureControllerDelegate,
-    @MainActor AVPictureInPictureSampleBufferPlaybackDelegate {
+    @preconcurrency AVPictureInPictureControllerDelegate,
+    @preconcurrency AVPictureInPictureSampleBufferPlaybackDelegate {
     func pictureInPictureControllerWillStartPictureInPicture(
         _ pictureInPictureController: AVPictureInPictureController
     ) {}
