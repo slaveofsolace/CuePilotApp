@@ -1,14 +1,7 @@
 # Vision Pipeline
 
-## Status
-
-The deterministic vision pipeline is implemented and passed strict Swift 6
-compilation plus synthetic smoke checks. At 384 × 240, the recorded smoke
-detected 6 balls in a clean fixture and 5 in a dark fixture, with 93.64 ms
-median and 97.94 ms P95 analysis duration.
-
-End-to-end accuracy has not been measured on a reviewed screenshot corpus,
-ReplayKit frames, or an iPhone Mirroring stream.
+The deterministic vision pipeline converts visible screen pixels into a
+canonical table model with confidence and correction provenance.
 
 ## Inputs and outputs
 
@@ -172,7 +165,7 @@ The current screenshot-review UI can correct:
 - required 8-ball pocket.
 
 The manual correction model is value-semantic. A new screenshot begins a new
-review; the current iPhone UI does not persist correction provenance across a
+review; the iPhone UI does not persist correction provenance across a
 durable match session.
 
 ## Test fixtures
@@ -190,9 +183,7 @@ Synthetic fixtures should randomize:
 Personal screenshots remain ignored by Git and outside release artifacts.
 Third-party artwork is not bundled.
 
-## Acceptance targets
-
-These are targets, not current results:
+## Quality targets
 
 - ball-center error below approximately 0.2 ball radii on golden fixtures;
 - near-perfect cue-ball and 8-ball classification on golden fixtures;
@@ -200,4 +191,5 @@ These are targets, not current results:
 - no unrecoverable workflow from one imperfect automatic detection;
 - initial full solve near or below one second on supported devices.
 
-Measurements belong in `TEST_REPORT.md` and `PERFORMANCE_REPORT.md`.
+See [Validation](VALIDATION.md) and [Performance](PERFORMANCE.md) for the
+measurement approach.

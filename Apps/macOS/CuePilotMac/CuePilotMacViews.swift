@@ -521,7 +521,7 @@ struct CaptureInspectorView: View {
                         .monospacedDigit()
                         .frame(width: 40, alignment: .trailing)
                     }
-                    Toggle("Debug Mode", isOn: $model.debugMode)
+                    Toggle("Show Analysis Details", isOn: $model.debugMode)
                     Picker("Hotkey", selection: $model.hotKeyChoice) {
                         ForEach(HotKeyChoice.allCases) { choice in
                             Text(choice.title).tag(choice)

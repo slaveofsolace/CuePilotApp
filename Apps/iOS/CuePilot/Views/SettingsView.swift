@@ -124,15 +124,15 @@ private struct PrivacyDetailsView: View {
             )
             privacyItem(
                 "No retained recording",
-                "Temporary buffers are discarded after analysis."
+                "Screen frames are discarded after analysis."
             )
             privacyItem(
                 "No analytics or ads",
                 "The app contains no analytics or advertising SDK."
             )
             privacyItem(
-                "Explicit diagnostics",
-                "A diagnostics file is created only when you request an export."
+                "Local diagnostics",
+                "Performance summaries stay on this device."
             )
         }
         .navigationTitle("Privacy")

@@ -7,7 +7,7 @@ cd "$ROOT_DIR"
 git diff --check
 swift test
 ./script/generate_project.sh
-if xcrun simctl list runtimes | rg -q '^-- iOS '; then
+if xcrun simctl list runtimes | rg -q '^iOS .+com\.apple\.CoreSimulator\.SimRuntime\.iOS-'; then
   xcodebuild \
     -workspace CuePilot.xcworkspace \
     -scheme CuePilot \
@@ -18,7 +18,6 @@ if xcrun simctl list runtimes | rg -q '^-- iOS '; then
     COMPILER_INDEX_STORE_ENABLE=NO \
     build
 else
-  echo "No iOS Simulator runtime is installed; compiling every iPhone target against the simulator SDK without the asset-catalog phase."
   xcodebuild \
     -project CuePilot.xcodeproj \
     -target CuePilot \

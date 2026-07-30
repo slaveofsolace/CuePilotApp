@@ -1,3 +1,3 @@
-Initial internal candidate with on-device screenshot analysis, manual table and
-ball correction, 8-ball rules, shot-path and power guidance, and explicit
-Live Assist setup.
+Analyze 8-ball screenshots on the device, correct table and ball detection,
+review legal-shot paths and power guidance, and start Live Assist through
+Apple's system broadcast controls.

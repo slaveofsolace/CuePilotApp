@@ -1,23 +1,21 @@
 import XCTest
 
 final class CuePilotUITests: XCTestCase {
-    private var app: XCUIApplication!
-
     override func setUpWithError() throws {
         continueAfterFailure = false
-        app = XCUIApplication()
-        app.launchArguments = ["-ui-testing"]
-        app.launch()
     }
 
+    @MainActor
     func testHomeAndPrimaryDestinations() {
+        let app = launchApp()
+
         XCTAssertTrue(app.staticTexts["CuePilot"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["Start Live Assist"].exists)
         XCTAssertTrue(app.buttons["Resume Match"].exists)
         XCTAssertTrue(app.buttons["Calibration"].exists)
         XCTAssertTrue(app.buttons["Settings"].exists)
 
-        attachScreenshot(named: "Home")
+        attachScreenshot(named: "Home", app: app)
 
         app.buttons["Start Live Assist"].tap()
         XCTAssertTrue(
@@ -26,10 +24,13 @@ final class CuePilotUITests: XCTestCase {
         )
         XCTAssertTrue(app.staticTexts["1. Start Broadcast"].exists)
         XCTAssertTrue(app.staticTexts["2. Start Picture in Picture"].exists)
-        attachScreenshot(named: "Live Assist Setup")
+        attachScreenshot(named: "Live Assist Setup", app: app)
     }
 
+    @MainActor
     func testSettingsAndPrivacyDetails() {
+        let app = launchApp()
+
         app.buttons["Settings"].tap()
         XCTAssertTrue(
             app.navigationBars["Settings"].waitForExistence(timeout: 3)
@@ -42,10 +43,13 @@ final class CuePilotUITests: XCTestCase {
             app.navigationBars["Privacy"].waitForExistence(timeout: 3)
         )
         XCTAssertTrue(app.staticTexts["No retained recording"].exists)
-        attachScreenshot(named: "Privacy")
+        attachScreenshot(named: "Privacy", app: app)
     }
 
+    @MainActor
     func testMatchStateControls() {
+        let app = launchApp()
+
         app.buttons["Resume Match"].tap()
         XCTAssertTrue(
             app.navigationBars["Match Session"]
@@ -54,19 +58,31 @@ final class CuePilotUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["YOUR TURN"].exists)
         XCTAssertTrue(app.switches["Your turn"].exists)
         XCTAssertTrue(app.buttons["Return to Live Assist"].exists)
-        attachScreenshot(named: "Match Session")
+        attachScreenshot(named: "Match Session", app: app)
     }
 
+    @MainActor
     func testCalibrationCorrectionFlow() {
+        let app = launchApp()
+
         app.buttons["Calibration"].tap()
         XCTAssertTrue(
             app.navigationBars["Calibration"].waitForExistence(timeout: 3)
         )
         XCTAssertTrue(app.staticTexts["Calibration"].exists)
-        attachScreenshot(named: "Calibration")
+        attachScreenshot(named: "Calibration", app: app)
     }
 
-    private func attachScreenshot(named name: String) {
+    @MainActor
+    private func launchApp() -> XCUIApplication {
+        let app = XCUIApplication()
+        app.launchArguments = ["-ui-testing"]
+        app.launch()
+        return app
+    }
+
+    @MainActor
+    private func attachScreenshot(named name: String, app: XCUIApplication) {
         let attachment = XCTAttachment(
             screenshot: app.screenshot()
         )

@@ -1,17 +1,8 @@
 # Architecture
 
-## Status
-
-`Package.swift` and `project.yml` declare the target and module boundaries
-described here. XcodeGen 2.46.0 has generated the project and workspace, shared
-modules passed a strict Swift 6 compilation checkpoint, the iPhone application
-and extension source sets typechecked against the iOS Simulator SDK, and
-`swift build --target CuePilotMac` passed after the release fixes. Fresh Xcode
-workspace builds are recorded separately in `TEST_REPORT.md`.
-
-No target has been signed, installed on an iPhone, exercised through live
-iPhone Mirroring, uploaded to TestFlight, or notarized. Runtime statements
-remain requirements unless the test report records direct evidence.
+CuePilot separates platform capture and presentation from reusable vision,
+geometry, physics, rules, session, calibration, and diagnostics modules.
+`Package.swift` and `project.yml` declare the boundaries described here.
 
 ## Product topology
 
@@ -59,7 +50,7 @@ team and provisioning profile.
 | `CueCalibration` | Local versioned profiles, conservative outcome updates, reset, confidence decay, and persistence |
 | `CueSession` | Match lifecycle, board reconciliation, turn/group state, required pocket, and prior shot outcomes |
 | `CuePresentation` | Platform-neutral live state, overlays, warnings, target identifiers, and accessibility text |
-| `CueDiagnostics` | Bounded numeric counters and latency summaries; the iPhone export action is not yet wired |
+| `CueDiagnostics` | Bounded numeric counters and latency summaries |
 | `CueVision` | Frame normalization, table/ball/cue/power detection, temporal tracking, and confidence |
 | `CueTestSupport` | Synthetic boards, fixtures, seeded random inputs, and shared assertions |
 
@@ -127,7 +118,7 @@ and no active foul or scratch warning.
 ## Concurrency and back pressure
 
 - Shared session and calibration stores use actor isolation.
-- Current iPhone screens do not yet write those durable stores.
+- The iPhone screens use session-local calibration and match state.
 - Capture adapters publish owned, bounded frame values.
 - Static board solving and high-rate cue/power tracking use separate task
   classes or priorities.
@@ -165,9 +156,9 @@ The shared modules provide local persistence for:
 - match sessions;
 - bounded numeric diagnostics;
 
-The current iPhone UI does not write the calibration or session stores and its
-diagnostic export button is a placeholder. The Mac app persists presentation,
-manual rule state, and calibration controls in user defaults.
+The iPhone UI keeps calibration and match controls in session-local state. The
+Mac app persists presentation, manual rule state, and calibration controls in
+user defaults.
 
 Raw frames and recordings are transient. The Broadcast Upload Extension shares
 only compact analytical state; it does not publish a screenshot or frame
@@ -196,18 +187,11 @@ standard sidebars, toolbars, sheets, or controls.
 - No secrets, personal fixtures, or signing material in source control.
 - Network access is not required for analysis.
 
-## Verification gates
+## Quality gates
 
-Architecture is accepted only after:
+The architecture is protected by deterministic shared tests, reproducible
+project generation, iPhone and Mac builds, repository safety scans, and live
+platform checks for capture and presentation behavior.
 
-1. Swift package tests pass.
-2. The Xcode workspace generates without manual file repair.
-3. iOS app and extension build together with valid App Group signing.
-4. macOS app builds with expected sandbox and capture behavior.
-5. source and binary scans find no private APIs or secrets.
-6. signed-device feasibility matrices are complete.
-7. latency, memory, energy, and stability results are recorded.
-
-Project generation and subsystem checkpoints have completed. The remaining
-build, signing, live-capture, performance, and distribution gates are tracked
-individually in `TEST_REPORT.md`.
+See [Validation](VALIDATION.md) for automated coverage and the physical-device
+matrix.

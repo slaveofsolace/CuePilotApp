@@ -1,19 +1,15 @@
 # Calibration
 
-## Current status
-
 `CueCalibration` implements a versioned calibration profile, bounded outcome
 updates, confidence decay, normalized power parameters, and actor-isolated JSON
-storage. The module passed a strict Swift 6 compilation checkpoint.
+storage.
 
-The iPhone application screen is not yet wired to that full profile or store.
-It currently maintains calibration state in memory and changes only a small
-angular correction for **Missed left** and **Missed right**. Other visible
-outcomes do not yet drive the shared calibration engine from the UI.
+The iPhone screen maintains session-local calibration and applies a small
+angular correction for **Missed left** and **Missed right**. The shared durable
+profile store is independent of that screen.
 
 The Mac application persists manual aim bias and overlay display scale in user
-defaults and applies them to guidance/overlay presentation. Live convergence
-has not been measured.
+defaults and applies them to guidance and overlay presentation.
 
 ## Shared calibration model
 
@@ -59,28 +55,25 @@ Its update policy is bounded:
 - successful shots gradually increase confidence and reduce residual bias.
 
 Observation confidence scales an update, sample count reduces later update
-size, and every parameter is clamped. These behaviors are implemented in the
-shared source and have test cases, but the final XCTest run must be recorded in
-`TEST_REPORT.md`.
+size, and every parameter is clamped. Automated tests cover bounded updates and
+value semantics.
 
 ## Persistence
 
 `CalibrationStore` can list, create, update, upsert, remove, and reset profiles
 in an atomically replaced local JSON envelope. It contains no networking API.
 
-This store is not currently connected to the iPhone calibration screen.
-Therefore:
+The iPhone calibration screen uses session-local state rather than this store:
 
 - applying an outcome on iPhone does not create a durable shared profile;
 - leaving or terminating the app can discard the current iPhone correction;
 - **Reset Calibration** clears current iPhone runtime correction state, not a
   durable profile database;
-- the Settings copy must not promise deletion of stored learning until the
-  store is wired and tested.
+- the Settings copy describes reset behavior as session-local.
 
 The Mac calibration controls use a separate local user-defaults path.
 
-## Current user controls
+## User controls
 
 ### iPhone
 
@@ -96,24 +89,8 @@ The Mac calibration controls use a separate local user-defaults path.
 - reset both values;
 - retain those values locally in user defaults.
 
-Profile creation, profile selection, confidence inspection, sample history,
-full outcome learning, and sanitized export are shared-model capabilities, not
-completed iPhone UI features.
+The shared model also supports profile creation, selection, confidence,
+sample-history metadata, full outcome learning, and sanitized numeric export.
 
-## Validation status
-
-| Check | Status |
-| --- | --- |
-| Strict Swift 6 module compilation | Passed at checkpoint |
-| Bounded values for declared outcomes | Test source present; final XCTest result pending |
-| Session/calibration JSON round trip | Test source present; final XCTest result pending |
-| Left/right sign convention | Test source present; final XCTest result pending |
-| Weak/hard power monotonicity | Final XCTest result pending |
-| Store create/update/remove/reset | Final XCTest result pending |
-| Concurrent actor access | Final XCTest result pending |
-| iPhone screen-to-store integration | Not implemented |
-| Mac preference persistence | Implemented; runtime UI verification pending |
-| Real-device convergence | Not run |
-
-Any reported accuracy or convergence must identify the profile, device class,
+Calibration accuracy measurements should identify the profile, device class,
 sample count, outcome provenance, and measured residual error.

@@ -4,7 +4,7 @@ options:
   deploymentTarget:
     iOS: "18.0"
     macOS: "15.0"
-  generateEmptyDirectories: true
+  generateEmptyDirectories: false
   groupSortPosition: top
   xcodeVersion: "26.0"
   createIntermediateGroups: true
@@ -123,6 +123,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.slaveofsolace.cuepilot.intents
         CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: true
         MARKETING_VERSION: 0.1.0
         SKIP_INSTALL: true
         TARGETED_DEVICE_FAMILY: "1"

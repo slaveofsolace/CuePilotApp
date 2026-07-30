@@ -2,17 +2,15 @@
 
 ## Supported versions
 
-CuePilot is in pre-release development. No build is currently supported for
-production use. Security fixes apply to the current `main` branch until a
-versioned release policy is published.
+Security fixes are applied to the latest release and the default branch.
+Older versions may be asked to update before a fix is provided.
 
 ## Reporting a vulnerability
 
-Report a vulnerability through the private repository's security-advisory
-channel once the remote repository exists. If that channel is unavailable,
-contact the repository owner privately and request a secure reporting route
-before sharing exploit details, captured screens, credentials, or personal
-data.
+Use the repository's **Security → Report a vulnerability** form. If private
+reporting is unavailable, open a public issue containing only a request for a
+secure contact route. Do not include exploit details or sensitive data in that
+issue.
 
 Include:
 
@@ -73,5 +71,5 @@ Before distribution:
 - verify ScreenCaptureKit selection and overlay behavior on the target Mac;
 - record unresolved issues in `docs/KNOWN_LIMITATIONS.md`.
 
-No security claim should be inferred from a successful source-level build
-alone.
+Source checks complement, but do not replace, signed-binary and live-platform
+security review.

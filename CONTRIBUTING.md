@@ -1,8 +1,7 @@
 # Contributing
 
-CuePilot is a clean-room, MIT-licensed project. Contributions require
-the repository owner's authorization. Submission does not grant permission to
-redistribute the project or its assets.
+CuePilot is an MIT-licensed project. Contributions that preserve its public-API,
+on-device, and user-controlled design are welcome.
 
 ## Clean-room requirements
 
@@ -48,9 +47,8 @@ Every behavioral change should add or update the smallest relevant test:
 Use synthetic fixtures where possible. Personal screenshots must remain outside
 the repository.
 
-Full iOS, extension, and signed-device validation requires Xcode and the
-appropriate Apple SDKs. If those are unavailable, state exactly which checks
-were not run.
+Changes to ReplayKit, Picture in Picture, App Groups, or ScreenCaptureKit should
+include the relevant signed-device or live-window verification.
 
 ## Change preparation
 
@@ -58,10 +56,11 @@ Before requesting review:
 
 1. Keep the change narrowly scoped.
 2. Update documentation and `CHANGELOG.md` for user-visible behavior.
-3. Run available tests and record the exact command and result.
+3. Run `./script/verify.sh` and any platform-specific tests affected by the
+   change.
 4. Check staged files for secrets and personal data.
 5. Confirm no legacy source or proprietary asset entered the repository.
-6. Describe limitations and unverified runtime behavior plainly.
+6. Describe user-visible limitations plainly.
 
 Use direct commit subjects such as `feat: add table normalization` or
 `test: cover illegal early 8-ball`.

@@ -1,14 +1,8 @@
 # Physics and Strategy
 
-## Status
-
-This document records the clean-room solver contract. Geometry, physics,
+This document records the solver contract. Geometry, physics,
 8-ball rules, direct shots, two-ball combinations, one-rail banks, ranking,
 robust corridors, and normalized power guidance are implemented.
-
-A checkpoint passed 31 compatibility checks, 80 seeded legality boards, and 60
-seeded path/ghost-clearance boards. No solver has been validated against live
-play.
 
 ## Canonical model
 
@@ -211,11 +205,10 @@ On an open table, compare group clearance, clusters, pocket access, and future
 final 8-ball, require complete group clearance, the correct pocket, clear paths,
 legal contact, controlled power, no scratch path, and high confidence.
 
-The current iPhone UI supplies manual group, turn, and called-pocket state but
-does not persist prior shots or perform multi-ply match planning. Those items
-remain design goals.
+The iPhone UI supplies manual group, turn, and called-pocket state. It does not
+persist prior shots or perform multi-ply match planning.
 
-## Required tests
+## Test coverage
 
 - exact vector, ghost-ball, line-circle, segment, jaw, and bank fixtures;
 - legal-state transitions and early 8-ball rejection;

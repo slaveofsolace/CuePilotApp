@@ -21,7 +21,7 @@ fi
 
 ATTRIBUTION_PATTERN='co''dex|chat''gpt|open''ai|ai[- ]gen''erated|gen''erated by ai'
 if rg -n -i "${SEARCH_ARGS[@]}" "$ATTRIBUTION_PATTERN" .; then
-  echo "Development-tool attribution is present in publishable files." >&2
+  echo "Prohibited attribution is present in publishable files." >&2
   exit 1
 fi
 
@@ -60,4 +60,4 @@ if git rev-parse --verify HEAD >/dev/null 2>&1; then
   fi
 fi
 
-echo "No local user paths, personal email addresses, Xcode user data, or development-tool attribution found."
+echo "No local user paths, personal email addresses, Xcode user data, or prohibited attribution found."

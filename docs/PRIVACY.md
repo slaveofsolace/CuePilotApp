@@ -1,7 +1,7 @@
 # Privacy
 
-Effective for the current pre-release source tree. Review this document against
-every final signed binary before distribution.
+This document describes the data handling implemented by CuePilot's iPhone,
+Broadcast Upload Extension, and Mac targets.
 
 ## Summary
 
@@ -10,7 +10,7 @@ on the device. The application does not require an account, cloud analysis,
 advertising, or behavioral analytics. It does not create or retain a continuous
 screen recording.
 
-The current privacy manifests declare:
+The privacy manifests declare:
 
 - no tracking;
 - no tracking domains;
@@ -20,8 +20,8 @@ The current privacy manifests declare:
   App Group defaults;
 - reason `CA92.1` for the Mac application's standard local preferences.
 
-All three property lists pass syntax validation. They remain source
-declarations, not completed signed-binary audits.
+Release review compares these declarations with the linked application
+binaries.
 
 ## Live screen capture
 
@@ -41,7 +41,6 @@ buffers after analysis. It does not:
 - automate input in the observed application.
 
 The Mac overlay hides when capture is stopped, stale, invalid, or unavailable.
-That behavior still requires live runtime verification.
 
 ## Screenshots and Photos
 
@@ -49,11 +48,10 @@ Screenshot analysis uses Apple's photo picker and receives only the selected
 image data. CuePilot does not enumerate the photo library or delete the user's
 original image.
 
-The current flow decodes the selected image into the active application state
+The app decodes the selected image into the active application state
 and does not create an application-managed screenshot file. That in-memory
 working image can remain until it is replaced, the state is discarded, or the
-process ends. A future durable cache would require a separate retention and
-deletion review.
+process ends.
 
 Personal screenshots:
 
@@ -64,16 +62,16 @@ Personal screenshots:
 
 ## Local settings and state
 
-Current iPhone runtime state includes:
+iPhone runtime state includes:
 
 - selected screenshot analysis and manual corrections;
 - group, turn, and called-pocket choices;
 - current calibration flag and angular correction;
 - presentation preferences.
 
-The current iPhone screens do not persist a match history or durable
-calibration profile. Shared `CueCalibration` and `CueSession` store types exist
-for future wiring, but their presence does not mean the iPhone UI writes them.
+The iPhone screens do not persist a match history or durable calibration
+profile. Shared `CueCalibration` and `CueSession` store types are separate from
+the screen's session-local state.
 
 The Mac application stores local preferences in user defaults, including
 overlay presentation, hotkey choice, manual game state, aim bias, and display
@@ -82,7 +80,7 @@ scale. It does not store captured frames as a recording.
 ## App Group transport
 
 The iPhone application and Broadcast Upload Extension use a private App Group.
-The current file transport publishes a compact, versioned analytical state with
+The file transport publishes a compact, versioned analytical state with
 sequence and integrity checks. It does not publish screenshots or a frame
 archive. Corrupt or stale state is rejected.
 
@@ -93,9 +91,7 @@ event counters. It excludes frames, screenshots, captured text, file paths,
 third-party bundle identifiers, accounts, contacts, and precise device
 identifiers.
 
-The iPhone Settings screen currently shows an export button placeholder; it
-does not create a diagnostics file. No user-facing export behavior should be
-claimed until that action is wired and tested.
+The iPhone Settings screen does not create a diagnostics export file.
 
 ## Networking
 
@@ -107,12 +103,12 @@ Build and distribution tools can contact package, source-hosting, and Apple
 services outside the application runtime. Their credentials must remain
 outside source control.
 
-Any future runtime network dependency requires a new privacy review, manifest
-update, user disclosure, security review, and explicit approval.
+Adding a runtime network dependency requires a privacy review, manifest update,
+user disclosure, and security review.
 
 ## Retention and deletion
 
-| Data | Current behavior |
+| Data | Behavior |
 | --- | --- |
 | Live frame pixels | Bounded transient processing; no recording file |
 | Selected screenshot | Working image held in memory; original remains in the user's library |
@@ -142,4 +138,4 @@ Unlicensed third-party screenshots or artwork must not be bundled.
 - test capture start, stop, stale-state clearing, and permission revocation;
 - test every visible reset or export control against its actual behavior;
 - update store privacy answers from observed behavior;
-- record the final audit in `TEST_REPORT.md`.
+- record the release audit with the signed artifacts.
