@@ -1,4 +1,4 @@
-# CuePilot
+# CuePilot — work in progress, app is ab 80% complete
 
 CuePilot is an on-device billiards companion for iPhone and Mac. It analyzes a
 visible 8-ball table, recommends a legal shot, and presents aim and power
